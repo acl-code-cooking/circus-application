@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Circus Application</title>
+</head>
+<body>
+<header></header>  
+<main>
+  <form>
+    <section>
+      <h2>Section 1</h2>
+      <p>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+      </p>
+
+      <p>
+        <label for="position">Positions Available:</label>
+        <select id="position" name="position">
+          <option hidden disabled selected>Select a Position</option>
+          <option value="fire-breather-eater">Fire Breather-Eater</option>
+          <option value="web-developer">Web Developer</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="peanuts">How allergic are you to peanuts?</label>
+        <input type="range" name="peanuts" id="peanuts" min="1" max="13" required>
+        <span id="peanut-display">6.5</span>
+      </p>
+
+    </section>
+
+    <section>
+      <h2>Section 2</h2>
+      <fieldset>
+        <legend>Do you like elephants?</legend>
+
+        <label for="yes">Yes</label>
+        <input type="radio" name="elephants" id="yes" value="yes" required>
+
+        <label for="no">NO</label>
+        <input type="radio" name="elephants" id="no" value="no" required>
+
+        <h4>Are You Sure?</h4>
+        <label for="absolutely">Absolutely</label>
+        <input for="absolutely" value="absolutely" type="checkbox" id="absolutely">
+  
+        <label for="unsure">Not at all sure</label>
+        <input for="unsure" value="unsure" type="checkbox" id="unsure">
+  
+        <label for="why">Why do you care</label>
+        <input for="why" value="why" type="checkbox" id="why">
+      </fieldset>
+
+    </section>
+  </form>
+</main>
+<footer></footer>
+</body>
+</html>
