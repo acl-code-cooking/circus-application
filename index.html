@@ -7,14 +7,14 @@
   <title>Circus Application</title>
 </head>
 <body>
-<header></header>  
+<header></header>
 <main>
-  <form>
+  <form id="circus-app">
     <section>
       <h2>Section 1</h2>
       <p>
         <label for="name">Name:</label>
-        <input type="text" name="name" id="name" required>
+        <input type="text" name="name" id="name">
       </p>
 
       <p>
@@ -28,7 +28,7 @@
 
       <p>
         <label for="peanuts">How allergic are you to peanuts?</label>
-        <input type="range" name="peanuts" id="peanuts" min="1" max="13" required>
+        <input type="range" name="peanuts" id="peanuts" min="1" max="13">
         <span id="peanut-display">6.5</span>
       </p>
 
@@ -38,27 +38,32 @@
       <h2>Section 2</h2>
       <fieldset>
         <legend>Do you like elephants?</legend>
-
         <label for="yes">Yes</label>
-        <input type="radio" name="elephants" id="yes" value="yes" required>
+        <input type="radio" name="elephants" id="yes" value="yes">
 
-        <label for="no">NO</label>
-        <input type="radio" name="elephants" id="no" value="no" required>
+        <label for="no">No</label>
+        <input type="radio" name="elephants" id="no" value="no">
 
-        <h4>Are You Sure?</h4>
-        <label for="absolutely">Absolutely</label>
-        <input for="absolutely" value="absolutely" type="checkbox" id="absolutely">
-  
-        <label for="unsure">Not at all sure</label>
-        <input for="unsure" value="unsure" type="checkbox" id="unsure">
-  
-        <label for="why">Why do you care</label>
-        <input for="why" value="why" type="checkbox" id="why">
+        <h4>Favorite Tiger Names</h4>
+        <label for="tony">Tony</label>
+        <input for="tony" value="tony" type="checkbox" id="tony">
+
+        <label for="tigger">Tigger</label>
+        <input for="tigger" value="tigger" type="checkbox" id="tigger">
+
+        <label for="sally">Sally</label>
+        <input for="sally" value="sally" type="checkbox" id="sally">
+
+        <label for="frank">Frank</label>
+        <input for="frank" value="frank" type="checkbox" id="frank">
       </fieldset>
-
+    </section>
+    <section>
+      <button>Circus Me Bro!</button>
     </section>
   </form>
 </main>
-<footer></footer>
+<footer>Footer</footer>
+<script type="module" src="./src/index.js"></script>
 </body>
 </html>
