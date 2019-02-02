@@ -5,10 +5,7 @@ const peanuts = document.getElementById('peanuts');
 const peanutDisplay = document.getElementById('peanut-display');
 const yes = document.getElementById('yes');
 const no = document.getElementById('no');
-const tony = document.getElementById('tony');
-const tigger = document.getElementById('tigger');
-const sally = document.getElementById('sally');
-const frank = document.getElementById('frank');
+
 
 peanuts.addEventListener('change', function() {
     peanutDisplay.textContent = peanuts.value;
@@ -16,8 +13,20 @@ peanuts.addEventListener('change', function() {
 
 circusApp.addEventListener('submit', function(event) {
     event.preventDefault();
+    const tigerNames = [];
+
+    for(let i = 0; i < circusApp.tiger.length; i++) {
+        const name = circusApp.tiger[i];
+        if(name.checked) {
+            tigerNames[i] = name.value;
+        }
+    }
+    
     const applicant = {
-        name: name.value
+        name: name.value,
+        allergy: peanuts.value,
+        position: position.value,
+        tigerNames: tigerNames
     };
 
     console.log(applicant);
