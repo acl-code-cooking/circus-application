@@ -3,8 +3,8 @@ const name = document.getElementById('name');
 const position = document.getElementById('position');
 const peanuts = document.getElementById('peanuts');
 const peanutDisplay = document.getElementById('peanut-display');
-const yes = document.getElementById('yes');
-const no = document.getElementById('no');
+// const yes = document.getElementById('yes');
+// const no = document.getElementById('no');
 
 
 peanuts.addEventListener('change', function() {
@@ -21,7 +21,7 @@ circusApp.addEventListener('submit', function(event) {
             tigerNames[i] = name.value;
         }
     }
-    
+
     const applicant = {
         name: name.value,
         allergy: peanuts.value,
