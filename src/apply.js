@@ -3,8 +3,7 @@ const name = document.getElementById('name');
 const position = document.getElementById('position');
 const peanuts = document.getElementById('peanuts');
 const peanutDisplay = document.getElementById('peanut-display');
-// const yes = document.getElementById('yes');
-// const no = document.getElementById('no');
+
 
 
 peanuts.addEventListener('change', function() {
@@ -24,8 +23,9 @@ circusApp.addEventListener('submit', function(event) {
 
     const applicant = {
         name: name.value,
-        allergy: peanuts.value,
         position: position.value,
+        allergy: peanuts.value,
+        likeElephants: circusApp.elephants.value,
         tigerNames: tigerNames
     };
 
