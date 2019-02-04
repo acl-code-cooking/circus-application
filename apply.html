@@ -4,15 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <title>Circus Application</title>
 </head>
 <body>
+
 <header>
   <h1>Application</h1>
   <a href="./index.html">Back To Home</a>
 </header>
+
 <main>
   <form id="circus-app">
+
     <section>
       <h2>Fill out info to best of your ability.</h2>
       <p>
@@ -27,6 +31,7 @@
           <option hidden disabled selected>Select a Position</option>
           <option value="fire-breather-eater">Fire Breather-Eater</option>
           <option value="web-developer">Web Developer</option>
+          <option value="circus-mummy">Circus Mummy</option>
         </select>
       </p>
 
@@ -40,19 +45,13 @@
 
     <section>
       <fieldset>
-        <legend>Do you like elephants?</legend>
-        <label for="yes">Yes</label>
-        <input type="radio" name="elephants" id="yes" value="yes">
-
-        <label for="no">No</label>
-        <input type="radio" name="elephants" id="no" value="no">
-
-        <h4>Favorite Tiger Names</h4>
+        <legend>Favorite Tiger Names</legend>
+      
         <label for="tony">Tony</label>
         <input name="tiger" for="tony" value="tony" type="checkbox" id="tony">
 
-        <label for="tigger">Tigger</label>
-        <input name="tiger" for="tigger" value="tigger" type="checkbox" id="tigger">
+        <label for="tiger-face">Tiger Face</label>
+        <input name="tiger" for="tiger-face" value="tiger-face" type="checkbox" id="tiger-face">
 
         <label for="sally">Sally</label>
         <input name="tiger" for="sally" value="sally" type="checkbox" id="sally">
@@ -66,7 +65,7 @@
     </section>
   </form>
 </main>
-<footer>Footer</footer>
+<footer>this is a footer</footer>
 <script type="module" src="./src/apply.js"></script>
 </body>
 </html>
