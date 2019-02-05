@@ -19,7 +19,7 @@ circusApp.addEventListener('submit', function(event) {
     for(let i = 0; i < circusApp.tiger.length; i++) {
         const name = circusApp.tiger[i];
         if(name.checked) {
-            tigerNames[i] = name.value;
+            tigerNames.push(name.value);
         }
     }
 

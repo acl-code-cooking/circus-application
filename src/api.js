@@ -1,10 +1,10 @@
 const api = {
-    save(applicant) {
+    save: function(applicant) {
         const serialize = JSON.stringify(applicant);
         window.localStorage.setItem('applicant', serialize);
     },
 
-    get() {
+    get: function() {
         const json = window.localStorage.getItem('applicant');
         const hydrate = JSON.parse(json);
         return hydrate;
