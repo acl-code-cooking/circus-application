@@ -1,8 +1,10 @@
+import api from '../api.js';
+
 const circusApp = document.getElementById('circus-app');
-//const name = document.getElementById('name');
 const position = document.getElementById('position');
 const peanuts = document.getElementById('peanuts');
 const peanutDisplay = document.getElementById('peanut-display');
+
 peanuts.addEventListener('change', function() {
     peanutDisplay.textContent = peanuts.value;
 });
@@ -19,13 +21,6 @@ circusApp.addEventListener('submit', function(event) {
         }
     }
 
-    const pet = {
-        animal: 'bird',
-        color: 'pink'
-    };
-
-    console.log(pet);
-
     const applicant = {
         name: name,
         position: position.value,
@@ -34,4 +29,7 @@ circusApp.addEventListener('submit', function(event) {
     };
 
     console.log(applicant);
+    api.save(applicant);
+
+    window.location = 'thanks.html';
 });

@@ -15,4 +15,15 @@ input {
   margin-right: 20px;
 }
 
+button:hover,
+button:focus {
+  color: #999;
+}
+
+button:active {
+  background-color: white;
+  color: black;
+  outline: 1px solid black;
+}
+
 
