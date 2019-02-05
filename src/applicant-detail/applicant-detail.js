@@ -8,5 +8,5 @@ const applicant = api.get();
 
 name.textContent = applicant.name;
 position.textContent = applicant.position;
-peanuts.textContent = applicant.peanuts;
+peanuts.textContent = applicant.allergy;
 tigerNames.textContent = applicant.tigerNames.join(', ');
