@@ -1,4 +1,4 @@
-import api from '../src/api.js';
+
 
 const applicant = {
     name: 'jeff',
@@ -7,5 +7,11 @@ const applicant = {
     tigerNames: ['tony', 'sally', 'tigger']
 };
 
-api.save(applicant);
-console.log(api.get());
+const serialize = JSON.stringify(applicant);
+//console.log serialize
+window.localStorage.setItem('applicant', serialize);
+
+const json = window.localStorage.getItem('applicant');
+const hydratedApplicant = JSON.parse(json);
+
+console.log(hydratedApplicant);
