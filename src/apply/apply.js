@@ -1,5 +1,6 @@
+import api from '../api.js';
+
 const circusApp = document.getElementById('circus-app');
-const name = document.getElementById('name');
 const position = document.getElementById('position');
 const peanuts = document.getElementById('peanuts');
 const peanutDisplay = document.getElementById('peanut-display');
@@ -12,6 +13,7 @@ peanuts.addEventListener('change', function() {
 
 circusApp.addEventListener('submit', function(event) {
     event.preventDefault();
+    const name = circusApp.elements.name.value;
     const tigerNames = [];
 
     for(let i = 0; i < circusApp.tiger.length; i++) {
@@ -22,12 +24,14 @@ circusApp.addEventListener('submit', function(event) {
     }
 
     const applicant = {
-        name: name.value,
+        name: name,
         position: position.value,
         allergy: peanuts.value,
-        likeElephants: circusApp.elephants.value,
         tigerNames: tigerNames
     };
 
     console.log(applicant);
+    api.save(applicant);
+
+    window.location = 'thanks.html';
 });

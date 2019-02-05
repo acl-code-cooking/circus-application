@@ -1,0 +1,29 @@
+html {
+  font-family: sans-serif;
+}
+
+footer {
+  margin-top: 30px;
+}
+
+label {
+  margin-right: 5px;
+  line-height: 32px;
+}
+
+input {
+  margin-right: 20px;
+}
+
+button:hover,
+button:focus {
+  color: #999;
+}
+
+button:active {
+  background-color: white;
+  color: black;
+  outline: 1px solid black;
+}
+
+
