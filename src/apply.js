@@ -1,4 +1,5 @@
 const circusApp = document.getElementById('circus-app');
+const name = document.getElementById('name');
 const position = document.getElementById('position');
 const peanuts = document.getElementById('peanuts');
 const peanutDisplay = document.getElementById('peanut-display');
@@ -11,27 +12,27 @@ peanuts.addEventListener('change', function() {
 
 circusApp.addEventListener('submit', function(event) {
     event.preventDefault();
-    const name = circusApp.elements.name.value;
     const tigerNames = [];
+    console.log(document.forms['circus'].tiger);
+    console.log(document.forms[0].tiger);
+    console.log(circusApp.tiger);
+
 
     for(let i = 0; i < circusApp.tiger.length; i++) {
         const name = circusApp.tiger[i];
         if(name.checked) {
-            tigerNames.push(name.value);
+            tigerNames[i] = name.value;
         }
     }
 
     const applicant = {
-        name: name,
+        name: name.value,
         position: position.value,
         allergy: peanuts.value,
+        likeElephants: circusApp.elephants.value,
         tigerNames: tigerNames
     };
 
+    console.log(tigerNames);
     console.log(applicant);
-    const serialize = JSON.stringify(applicant);
-    //console.log serialize
-    window.localStorage.setItem('applicant', serialize);
-
-    window.location = 'thanks.html';
 });
