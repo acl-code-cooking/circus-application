@@ -5,7 +5,9 @@ const peanuts = document.getElementById('peanuts');
 const tigerNames = document.getElementById('tiger-names');
 // const applicantDetail = document.getElementById('applicant-detail');
 
+// pull the json applicant object off of localStorage using getItem();
 const json = window.localStorage.getItem('applicant');
+// parse the JSON and set as the hydratedApplicant version of applicant
 const hydratedApplicant = JSON.parse(json);
 
 name.textContent = hydratedApplicant.name;

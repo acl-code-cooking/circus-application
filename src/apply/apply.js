@@ -29,8 +29,11 @@ circusApp.addEventListener('submit', function(event) {
     };
 
     console.log(applicant);
+    // stringify JSON onject and set to variable(serialize)
     const serialize = JSON.stringify(applicant);
     //console.log serialize
+
+    // save the applicant object using setItem();
     window.localStorage.setItem('applicant', serialize);
 
     window.location = 'thanks.html';
