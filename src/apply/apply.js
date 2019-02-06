@@ -3,8 +3,6 @@ const position = document.getElementById('position');
 const peanuts = document.getElementById('peanuts');
 const peanutDisplay = document.getElementById('peanut-display');
 
-
-
 peanuts.addEventListener('change', function() {
     peanutDisplay.textContent = peanuts.value;
 });
@@ -28,10 +26,15 @@ circusApp.addEventListener('submit', function(event) {
         tigerNames: tigerNames
     };
 
-    console.log(applicant);
-    const serialize = JSON.stringify(applicant);
-    //console.log serialize
-    window.localStorage.setItem('applicant', serialize);
+    let applicants = [];
+    const jsonString = window.localStorage.getItem('applicants');
+    if(jsonString) {
+        applicants = JSON.parse(jsonString);
+    }
+
+    applicants.push(applicant);
+    const serialize = JSON.stringify(applicants);
+    window.localStorage.setItem('applicants', serialize);
 
     window.location = 'thanks.html';
 });
