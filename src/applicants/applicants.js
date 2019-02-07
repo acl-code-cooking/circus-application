@@ -15,13 +15,16 @@ for(let index = 0; index < applicants.length; index++) {
     const tr = document.createElement('tr');
 
     const nameCell = document.createElement('td');
-    nameCell.textContent = applicant.name;
+    const a = document.createElement('a');
+    // show them how url's autocorrect for spaces since spaces aren't allowed
+    a.href = 'applicant-detail.html?name=' + encodeURIComponent(applicant.name);
+    a.textContent = applicant.name;
+    nameCell.appendChild(a);
     tr.appendChild(nameCell);
 
     const positionCell = document.createElement('td');
     positionCell.textContent = applicant.position;
     tr.appendChild(positionCell);
-
     const allergyCell = document.createElement('td');
     allergyCell.textContent = applicant.allergy;
     tr.appendChild(allergyCell);
