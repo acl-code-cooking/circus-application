@@ -26,4 +26,16 @@ button:active {
   outline: 1px solid black;
 }
 
+tr {
+  height: 40px;
+  background-color: steelblue;
+}
+
+td {
+  border: 1px solid pink;
+}
+
+#header-row {
+  background-color: pink;
+}
 
